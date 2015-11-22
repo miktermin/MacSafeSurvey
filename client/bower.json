@@ -8,13 +8,12 @@
   "moduleType": [],
   "keywords": [
     "survey",
-    "macadamian",
-    "safe",
-    "survey"
+    "Macadamian",
+    "safe"
   ],
   "license": "MIT",
   "homepage": "",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",

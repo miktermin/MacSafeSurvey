@@ -2,18 +2,21 @@
   "name": "mac-safe-survey",
   "version": "0.1.0",
   "description": "Macadamian Safe Survey",
-  "main": "app.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "survey",
     "Macadamian",
-    "safe",
-    "survey"
+    "safe"
   ],
   "author": "Michael Ter-Minasyan",
   "license": "ISC",
   "devDependencies": {
-    "grunt-cli": "^0.1.13"
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1"
   }
 }
