@@ -1,39 +1,45 @@
 module.exports = function (grunt) {
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.initConfig({
-        connect: {
-            server: {
-                options: {
-                    port: 9000,
-                    base: '.',
-                    hostname: 'localhost',
-                    keepalive: true
-                }
-            }
-        },
-        watch: {
-            scripts: {
-                files: ['app/scripts/*.js'],
-                options: {
-                    debounceDelay: 250,
-                    event: ['all'],
-                    reload: true
-                },
-                tasks: ['connect']
-            },
-            options: {
-                livereload: true
-            }
+  grunt.file.setBase('./app');
+
+  grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          protocol: 'http',
+          hostname: 'localhost',
+          open: true
         }
-    });
+      }
+    },
+    watch: {
+      options: {
+        livereload: true
+      },
+      scripts: {
+        files: './**/*.js',
+        options: {
+          event: ['all']
 
-    grunt.event.on('watch', function (action, filepath, target) {
-       grunt.log.writeln(target + ': ' + filepath + ' has ' + action);
-    });
+        }
+      },
+      html: {
+        files: './**/*.html',
+        options: {
+          event: ['all']
+        }
+      },
+      css: {
+        files: './**/*.css',
+        options: {
+          event: ['all']
+        }
+      }
+    }
+  });
 
-    grunt.registerTask('default', [
-        'connect'
-    ]);
+  grunt.registerTask('serve', ['connect:server', 'watch']);
 };
