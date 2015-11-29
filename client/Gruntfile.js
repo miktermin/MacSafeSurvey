@@ -2,8 +2,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.file.setBase('./app');
-
   grunt.initConfig({
     connect: {
       server: {
@@ -11,7 +9,8 @@ module.exports = function (grunt) {
           port: 9000,
           protocol: 'http',
           hostname: 'localhost',
-          open: true
+          open: true,
+          base: ['.', 'app/']
         }
       }
     },
