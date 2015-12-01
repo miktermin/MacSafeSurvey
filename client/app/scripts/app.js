@@ -13,7 +13,7 @@ var Controllers = angular.module('MacSecSurvControllers', []),
     $routeProvider.
       when('/', {
         controller: 'MainCtrl',
-        templateUrl: '../views/main.html'
+        templateUrl: '../views/login.html'
       });
   }]);
 })();

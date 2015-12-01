@@ -1,25 +1,32 @@
 html, body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     height: 100%;
 }
-.main-page {
+
+/* MAIN CONTAINER */
+.main-container {
+    /*border: 1px solid black;*/
     height: 100%;
 }
-.main-page header {
-    border: 1px solid yellow;
-    display: table;
-    height: 20%;
+
+/* LOGIN PAGE */
+.login-page {
+    height: 30%;
+    top: 25%;
 }
-.main-page nav {
-    border: 1px solid red;
+.login-page .form-container {
+    /*border: 1px solid green;*/
+    height: 50%;
+    margin-top: 10%;
 }
-.main-page aside {
-    border: 1px solid green;
+.login-page input:first-child {
+    margin-bottom: 2%;
 }
-.main-page footer {
-    border: 1px solid grey;
+
+.login-page input {
+    font-size: 1.2em;
 }
-.main-page main {
-    border: 1px solid black;
+.login-page button {
+    margin-top: 1em;
 }
